@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/form.css">
+	<link rel="icon" href="img/favi1.ico">
+</head>
+<body id="bc">
+    <div class="container">
+        <nav>
+                <a href="../index.html" class="text-white btn-neon">
+                    <span id="span1"></span>
+                    <span id="span2"></span>
+                    <span id="span3"></span>
+                    <span id="span4"></span>
+                    Inicio</a>
+            </nav>
+    </div>
+    <main>
+		<form action="" class="formulario" id="formulario">
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre y Apellido</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Pedro Perez">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El Nombre tiene que ser de 4 a 20 dígitos y solo puede contener letras</p>
+			</div>
+
+			<!-- Grupo: Empresa -->
+			<div class="formulario__grupo" id="grupo__empresa">
+				<label for="empresa" class="formulario__label">Empresa (opcional)</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="empresa" id="empresa" placeholder="Empresa">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div>
+
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="1112345678">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El telefono debe tener al menos 8 dígitos.</p>
+			</div>
+
+            <!-- Grupo: Mensaje -->
+			<div class="formulario__grupo formulario__texto" id="grupo__mensaje">
+				<label for="mensaje" class="formulario__label">Mensaje</label>
+				<textarea id="message" name="message" id="" cols="80" rows="8"></textarea>
+				
+			</div>
+
+			
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+
+        <div class="redes">
+            <ul>
+                <a href="#"><li><i class="fa-brands fa-github fa-2xl"></i></li></a>
+                <a href="#"> <li><i class="fa-brands fa-linkedin-in fa-2xl"></i></li></a>
+            </ul>
+        </div>
+        <div class="mapa">
+            <h2>Ubicacion de trabajo</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.26483389553!2d-58.50333874112893!3d-34.61580373594946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1653162401585!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+	</main>
+    <script src="../formulario.js"></script>
+    <script src="https://kit.fontawesome.com/d4e4c1db62.js" crossorigin="anonymous"></script>
+</body>
+</html>

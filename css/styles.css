@@ -1,0 +1,344 @@
+@font-face {
+	font-family: 'Regular';
+	src:url(../fonts/Graphik-Regular.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Semibold';
+	src: url(../fonts/Graphik-Semibold.ttf) format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Medium';
+	src:url(../fonts/Graphik-Medium.ttf) format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+* {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+  font-family:'Semibold';
+  overflow-x: hidden;
+  background-color: black;
+  background-size: cover;
+  font-size: calc(1em + 1vw);
+}
+
+button{
+  background-color: transparent;
+	font-family:"Medium";
+	color: #ffffff;
+	position: fixed;
+	bottom: 4%;
+}
+h2 {
+	font-family:'Semibold';
+	line-height: 140%;
+  font-size: 3em;
+}
+h4 {
+	font-family:'Semibold';	
+	line-height: 140%;
+	font-size: 1.6em;
+	margin: 10vh 0 4vh 0;
+}
+p {
+	line-height: 170%;
+	font-family:'Regular';
+	font-size: .8em;
+	margin-bottom: 3vh;
+}
+a, a:after, a:visited {
+	text-decoration: none;
+	cursor: pointer;	
+}
+nav{
+  align-self: flex-end;
+  padding: 1.5em ;
+  position: fixed;
+}
+.width70{
+  max-width: 60%;
+  margin: 0 auto 4em;
+}
+
+.size-large {
+	line-height: 160%;
+	font-size: 1.2em;
+	margin-bottom: 4vh;
+}
+.size-small {
+	font-family: "Medium";
+	font-size: .7em;
+	margin-bottom: 0;
+}
+.text-white{
+  color: #ffffff;
+}
+.text-blue{
+  color: #2121c3;
+}
+.box{
+  padding-left: 10em;
+}
+#start{
+  margin-top: 5em;
+}
+.enlace{
+  text-decoration: none;
+  line-height: 110%;
+	letter-spacing: -2px;
+  font-size: 3.2em;
+}
+.boxw:hover {
+  margin-left: 5em;
+	transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.enlace:hover {
+	margin-left: .5em;
+	transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.titulo{
+  padding: 0 20vw 0 35vw;
+  text-align: end;
+}
+.animate {
+  max-width: 50vw;
+  margin: 12vh 0 10vh 0;
+	animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	animation-fill-mode:backwards;
+}
+
+@keyframes animate {
+	0% {opacity: 0;transform: translateY(30vh);} 
+	100% {opacity: 1;transform: translateY(0%);}	
+}
+
+/******************* HOME PAGE AREAS********************/
+.container{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:  "box1 foto"
+                        "box2 foto"
+                        "box3 foto";
+}
+.containera{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.containerw{
+  display: flex;
+  flex-direction: column;
+  margin-left:15vw;
+  height: auto;
+  width: 85vw;
+}
+.boxw{
+  margin: 1.5em 0 1.5em 5vw;
+}
+.box{
+ justify-self: start;
+ display: flex;
+}
+.foto{
+  background: url(../img/foto.png);
+  background-size: cover;
+  grid-row: span 3; 
+  grid-area: foto;
+  position: fixed;
+	top: 0; 
+	right: 0; 
+	bottom: 0; 
+	left: 35%;
+}
+.foto-container{
+ 	overflow: hidden;
+	margin: 10vh 12vw;
+  object-fit: cover;
+  overflow: hidden;
+  
+}
+.fotoa{
+  height: 16em;
+  border: solid aqua .2em;
+  border-radius: .5em;
+}
+
+#b1,#b1m{ 
+  grid-area: box1;
+  align-self: end;
+}
+#b2,#b2m{
+  grid-area: box2;
+  align-self: center;
+}
+#b3,#b3m{
+  grid-area: box3;
+  align-self: start;
+}
+.tap {
+  grid-area: tapp;
+  text-align: center;
+}
+
+.btn-neon{
+  position: relative;
+  display: inline-block;
+  padding: .3em .3em;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.1s;
+  border-radius: .5em;
+}
+.btn-neon:hover{
+  background: aqua;
+  box-shadow: 0 0 .8em aqua, 0 0 18em aqua, 0 0 40em aqua;
+  transition-delay: .5s;
+}
+.btn-neon span{
+  position: absolute;
+  display: block;
+}
+#span1{
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: .1em;
+  background: linear-gradient(90deg, transparent,aqua);
+}
+.btn-neon:hover #span1{
+  left: 100%;
+  transition: .15s;
+}
+#span3{
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: .1em;
+  background: linear-gradient(270deg, transparent,aqua);
+}
+.btn-neon:hover #span3{
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.2s;
+}
+#span2{
+  top: -100%;
+  right: 0;
+  width: .1em;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,aqua);
+}
+.btn-neon:hover #span2{
+  top: 100%;
+  transition: .3s;
+  transition-delay: 0.3s;
+}
+#span4{
+  bottom: -100%;
+  left: 0;
+  width: .1em;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,aqua);
+}
+.btn-neon:hover #span4{
+  bottom: 100%;
+  transition: .3s;
+  transition-delay: 0.4s;
+}
+
+@media screen and (min-width: 769px){
+  .boxm,.tap{
+    display: none;
+  }
+}
+/* ******* CORTE TABLETS HOME PAGE*************** */
+@media screen and (max-width: 768px){
+  .titulo{
+    padding: 0 20vw 0 25vw;
+   }
+   .foto-container{
+    margin: 7vh 18vw;
+  }
+ .fotoa{
+   height: 14em;
+ }
+ i{
+   color: white;
+ }
+   .boxd{
+    display: none;
+  }
+
+  .box{
+    padding-left: 1.5em;
+  }
+  .boxw{
+    margin: 2em 0 2em 5vw;
+  }
+    
+  .enlace:hover {
+    margin-left: 12px;
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+  .container{
+    display: grid;
+    grid-template-rows: 1fr .5fr 1fr .3fr;
+    grid-template-columns: .5fr 1fr;
+    grid-template-areas:  "box1 foto"
+                          "box2 foto"
+                          "box3 foto"
+                          "tapp foto";
+  }
+  .foto{
+    left: 30%;
+  }
+}
+
+/* ******* CORTE SMARTHPHONES HOME PAGE*************** */
+@media screen and (max-width: 577px){
+  .boxw{
+    margin-left: 5vw;
+  }
+  .boxd{
+    display: none;
+  }
+  body{
+    font-size: medium;
+  }
+  .box{
+   padding-left: 1em;
+  }
+  .enlace:hover {
+    margin-left: 15px;
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+  .container{
+    display: grid;
+    grid-template-rows: 1fr .5fr 1fr .2fr;
+    grid-template-columns: .7fr 1fr;
+    grid-template-areas:  "box1 foto"
+                          "box2 foto"
+                          "box3 foto"
+                          "tapp foto";
+  }
+  .foto{
+    left: 15%;
+  }
+}
+
+  
